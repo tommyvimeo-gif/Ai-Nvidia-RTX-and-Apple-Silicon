@@ -1,68 +1,27 @@
 <!DOCTYPE html>
 <html lang="sl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Igralne konzole in APU – PS5, Xbox Series X</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Konzole in APU</title><link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></head>
 <body>
-  <header>
-    <div class="nav-container">
-      <a href="index.html" class="logo">Unified<span>Memory</span>.si</a>
-      <nav>
-        <a href="index.html">Domov</a>
-        <a href="x86-vs-arm.html">x86 vs ARM</a>
-        <a href="soc-unified.html">SoC & Unified Memory</a>
-        <a href="nvidia-rtx-spark.html">NVIDIA RTX / DGX Spark</a>
-        <a href="apple-silicon.html">Apple Silicon & M5/M6</a>
-        <a href="surface-laptop.html">Microsoft Surface</a>
-        <a href="konzole-apu.html" class="active">Konzole & APU</a>
-        <a href="mini-pc.html">Mini PC-ji</a>
-      </nav>
-    </div>
-  </header>
-  <section class="hero">
-    <h1>Igralne konzole in APU</h1>
-    <p>PS5 in Xbox Series X sta že 2020 uporabljala skupni pomnilnik na x86.</p>
-  </section>
-  <div class="container content">
-    <div class="img-box">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_5_console_and_controller.jpg/640px-PlayStation_5_console_and_controller.jpg" alt="PlayStation 5" style="max-width:100%; max-height:280px; border-radius:10px;">
-      <figcaption>PlayStation 5 – x86 APU z 16 GB skupnim GDDR6</figcaption>
-    </div>
-    <h2>Kaj je APU?</h2>
-    <p><strong>APU</strong> (Accelerated Processing Unit) je AMD-jev izraz za čip, ki združuje CPU in GPU na istem die-ju. Pri konzolah gre za custom APU, optimiziran za igre.</p>
-    <h2>PlayStation 5</h2>
-    <ul>
-      <li>CPU: 8-jedrni / 16-nitni AMD Zen 2 (x86-64), do 3,5 GHz</li>
-      <li>GPU: custom RDNA 2, do 2,23 GHz (~10,28 TFLOPS)</li>
-      <li><strong>16 GB GDDR6</strong> – skupen za CPU in GPU</li>
-      <li>Pasovna širina: <strong>448 GB/s</strong></li>
-    </ul>
-    <div class="highlight">PS5 s 448 GB/s še vedno prekaša številne sodobne Unified Memory sisteme (npr. DGX Spark ~273 GB/s).</div>
-    <h2>Xbox Series X</h2>
-    <ul>
-      <li>CPU: 8-jedrni Zen 2, 3,8 GHz</li>
-      <li>GPU: custom RDNA 2, 52 CU (~12,15 TFLOPS)</li>
-      <li>16 GB GDDR6 na 320-bit vmesniku</li>
-      <li>10 GB "Optimal" @ 560 GB/s + 6 GB "Standard" @ 336 GB/s</li>
-    </ul>
-    <h2>Primerjava</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Sistem</th><th>CPU</th><th>Pomnilnik</th><th>Pasovna širina</th></tr></thead>
-        <tbody>
-          <tr><td>PS5</td><td>x86-64 Zen 2</td><td>16 GB GDDR6 skupni</td><td>448 GB/s</td></tr>
-          <tr><td>Xbox Series X</td><td>x86-64 Zen 2</td><td>16 GB GDDR6 (split)</td><td>560 / 336 GB/s</td></tr>
-          <tr><td>Apple Silicon</td><td>ARM</td><td>Unified Memory</td><td>odvisno od modela</td></tr>
-          <tr><td>NVIDIA Spark</td><td>ARM Grace</td><td>do 128 GB LPDDR5X</td><td>~273–300 GB/s</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p>Osnovna ideja je podobna: CPU in GPU delita isti pomnilnik. Unified Memory ni izum ARM-a ali Appla.</p>
-  </div>
-  <footer><p><a href="index.html">← Nazaj</a></p></footer>
-</body>
-</html>
+<header><div class="nav-container"><a href="index.html" class="logo">Unified<span>Memory</span>.si</a><nav><a href="index.html">Domov</a><a href="x86-vs-arm.html">x86 vs ARM</a><a href="soc-unified.html">SoC & Unified Memory</a><a href="nvidia-rtx-spark.html">NVIDIA RTX / DGX Spark</a><a href="apple-silicon.html">Apple Silicon & M5/M6</a><a href="surface-laptop.html">Microsoft Surface</a><a href="konzole-apu.html" class="active">Konzole & APU</a><a href="mini-pc.html">Mini PC-ji</a></nav></div></header>
+<section class="hero"><h1>Igralne konzole in APU</h1><p>PS5 in Xbox Series X – skupni pomnilnik na x86 že od 2020.</p></section>
+<div class="container content">
+<div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_5_console_and_controller.jpg/640px-PlayStation_5_console_and_controller.jpg" alt="PS5" style="max-width:100%; max-height:280px; border-radius:10px;"><figcaption>PlayStation 5</figcaption></div>
+<h2>PS5</h2><p>8-jedrni Zen 2, RDNA 2, 16 GB GDDR6 skupni, 448 GB/s.</p>
+<h2>Xbox Series X</h2><p>8-jedrni Zen 2, RDNA 2, 16 GB GDDR6 (10 GB @ 560 GB/s + 6 GB @ 336 GB/s).</p>
+<div class="highlight">Unified Memory ni izum ARM-a ali Appla – konzole so to pokazale že pred leti.</div>
+<h2>Galerija – relevantne slike</h2>
+<div class="gallery">
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_5_console_and_controller.jpg/640px-PlayStation_5_console_and_controller.jpg" alt="PS5" loading="lazy"><figcaption>PlayStation 5</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/200px-AMD_Logo.svg.png" alt="AMD" loading="lazy"><figcaption>AMD APU</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nvidia_DGX_Spark_oblique_view_dllu.jpg" alt="DGX Spark" loading="lazy"><figcaption>NVIDIA Spark</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/NVIDIA_logo.svg/200px-NVIDIA_logo.svg.png" alt="NVIDIA" loading="lazy"><figcaption>NVIDIA</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png" alt="Apple" loading="lazy"><figcaption>Apple</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Microsoft_logo_%282012%29.svg/200px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft" loading="lazy"><figcaption>Xbox / Microsoft</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Arm_logo_2017.svg/200px-Arm_logo_2017.svg.png" alt="ARM" loading="lazy"><figcaption>ARM</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Intel_logo_%282020%2C_light_blue%29.svg/200px-Intel_logo_%282020%2C_light_blue%29.svg.png" alt="Intel" loading="lazy"><figcaption>Intel</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Qualcomm_Snapdragon_logo.svg/200px-Qualcomm_Snapdragon_logo.svg.png" alt="Snapdragon" loading="lazy"><figcaption>Snapdragon</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/TSMC_Logo.svg/200px-TSMC_Logo.svg.png" alt="TSMC" loading="lazy"><figcaption>TSMC</figcaption></figure>
+</div>
+</div>
+<footer><p><a href="index.html">← Nazaj</a></p></footer>
+</body></html>

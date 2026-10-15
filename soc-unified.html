@@ -1,84 +1,27 @@
 <!DOCTYPE html>
 <html lang="sl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SoC in Unified Memory – razlaga</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SoC in Unified Memory</title><link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></head>
 <body>
-  <header>
-    <div class="nav-container">
-      <a href="index.html" class="logo">Unified<span>Memory</span>.si</a>
-      <nav>
-        <a href="index.html">Domov</a>
-        <a href="x86-vs-arm.html">x86 vs ARM</a>
-        <a href="soc-unified.html" class="active">SoC & Unified Memory</a>
-        <a href="nvidia-rtx-spark.html">NVIDIA RTX / DGX Spark</a>
-        <a href="apple-silicon.html">Apple Silicon & M5/M6</a>
-        <a href="surface-laptop.html">Microsoft Surface</a>
-        <a href="konzole-apu.html">Konzole & APU</a>
-        <a href="mini-pc.html">Mini PC-ji</a>
-      </nav>
-    </div>
-  </header>
-  <section class="hero">
-    <h1>SoC in Unified Memory</h1>
-    <p>Kako integracija komponent in skupni pomnilnik spreminjata način, kako računalniki delujejo.</p>
-  </section>
-  <div class="container content">
-    <h2>Kaj je SoC (System on a Chip)?</h2>
-    <p>SoC pomeni, da so številne ključne komponente računalnika integrirane v <strong>en sam čip</strong>:</p>
-    <ul>
-      <li>CPU jedra</li>
-      <li>GPU (grafični procesor)</li>
-      <li>Neural Engine / NPU</li>
-      <li>pomnilniški krmilniki</li>
-      <li>video kodeki, I/O krmilniki in drugi pospeševalniki</li>
-    </ul>
-    <p>Pri starejšem Intelovem Macu je bila sestava ločena. Pri Apple Silicon in podobnih sistemih so komponente združene v en SoC.</p>
-    <h2>Kaj je Unified Memory?</h2>
-    <p>CPU, GPU in AI-pospeševalniki <strong>delijo isti fizični pomnilnik</strong>. Ni več ločenega sistemskega RAM-a in ločenega VRAM-a.</p>
-    <div class="compare">
-      <div class="card">
-        <h3>Klasični PC z ločeno grafiko</h3>
-        <div class="diagram">CPU ──► Sistemski RAM (npr. 32 GB)
-         │
-         ▼ (prenos prek PCIe)
-GPU ──► Ločeni VRAM (npr. 16 GB)</div>
-        <p>Podatki se pogosto kopirajo med RAM in VRAM.</p>
-      </div>
-      <div class="card">
-        <h3>Sistem z Unified Memory</h3>
-        <div class="diagram">      SoC
- ┌─────────────────┐
- │  CPU  GPU  AI   │
- │        │        │
- │   Skupen        │
- │   pomnilnik     │
- └─────────────────┘</div>
-        <p>CPU in GPU dostopata do istega pomnilnika – manj kopiranja.</p>
-      </div>
-    </div>
-    <h2>Ali 16 GB Unified Memory pomeni 16 GB VRAM-a?</h2>
-    <p><strong>Ne povsem.</strong> Gre za 16 GB skupne fizične kapacitete. GPU lahko dostopa do več pomnilnika kot pri ločeni kartici z npr. 8 GB VRAM-a – koristno za 3D, video in lokalne AI-modele.</p>
-    <div class="highlight">Skupni pomnilnik ni čarovnija: enote tekmujejo za pasovno širino. Del prostora zaseda OS in aplikacije.</div>
-    <h2>Zakaj konzole to uporabljajo že dolgo?</h2>
-    <p>PS5 in Xbox Series X sta že 2020 pokazala učinkovitost skupnega pomnilnika (16 GB GDDR6). Več na <a href="konzole-apu.html">Konzole & APU</a>.</p>
-    <h2>Prednosti in slabosti</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th></th><th>Unified Memory / SoC</th><th>Ločen RAM + VRAM</th></tr></thead>
-        <tbody>
-          <tr><td>Učinkovitost</td><td>Manj kopiranja, nižja poraba</td><td>—</td></tr>
-          <tr><td>Zmogljivost</td><td>Dobro za AI, video, 3D</td><td>Višja pasovna širina VRAM</td></tr>
-          <tr><td>Nadgradljivost</td><td>Običajno ni</td><td>Lahko zamenjaš GPU in RAM</td></tr>
-          <tr><td>Velikost</td><td>Omogoča tanke naprave</td><td>Zahteva več prostora</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <footer><p><a href="index.html">← Nazaj</a></p></footer>
-</body>
-</html>
+<header><div class="nav-container"><a href="index.html" class="logo">Unified<span>Memory</span>.si</a><nav><a href="index.html">Domov</a><a href="x86-vs-arm.html">x86 vs ARM</a><a href="soc-unified.html" class="active">SoC & Unified Memory</a><a href="nvidia-rtx-spark.html">NVIDIA RTX / DGX Spark</a><a href="apple-silicon.html">Apple Silicon & M5/M6</a><a href="surface-laptop.html">Microsoft Surface</a><a href="konzole-apu.html">Konzole & APU</a><a href="mini-pc.html">Mini PC-ji</a></nav></div></header>
+<section class="hero"><h1>SoC in Unified Memory</h1><p>Integracija komponent in skupni pomnilnik.</p></section>
+<div class="container content">
+<h2>SoC</h2><p>CPU + GPU + NPU + krmilniki v enem čipu.</p>
+<h2>Unified Memory</h2><p>CPU, GPU in AI delijo isti fizični pomnilnik – manj kopiranja podatkov.</p>
+<div class="compare"><div class="card"><h3>Klasični PC</h3><div class="diagram">CPU → RAM\n ↓ PCIe\nGPU → VRAM</div></div><div class="card"><h3>Unified Memory</h3><div class="diagram">SoC: CPU+GPU+AI\n → Skupen pomnilnik</div></div></div>
+<div class="highlight">16 GB Unified Memory ni enako 16 GB RAM + 16 GB VRAM.</div>
+<h2>Galerija – relevantne slike</h2>
+<div class="gallery">
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nvidia_DGX_Spark_oblique_view_dllu.jpg" alt="DGX Spark" loading="lazy"><figcaption>Unified Memory primer</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_5_console_and_controller.jpg/640px-PlayStation_5_console_and_controller.jpg" alt="PS5" loading="lazy"><figcaption>PS5 skupni pomnilnik</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/NVIDIA_logo.svg/200px-NVIDIA_logo.svg.png" alt="NVIDIA" loading="lazy"><figcaption>NVIDIA</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png" alt="Apple" loading="lazy"><figcaption>Apple Unified Memory</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Microsoft_logo_%282012%29.svg/200px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft" loading="lazy"><figcaption>Microsoft</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Arm_logo_2017.svg/200px-Arm_logo_2017.svg.png" alt="ARM" loading="lazy"><figcaption>ARM SoC</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/200px-AMD_Logo.svg.png" alt="AMD" loading="lazy"><figcaption>AMD APU</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Intel_logo_%282020%2C_light_blue%29.svg/200px-Intel_logo_%282020%2C_light_blue%29.svg.png" alt="Intel" loading="lazy"><figcaption>Intel</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Qualcomm_Snapdragon_logo.svg/200px-Qualcomm_Snapdragon_logo.svg.png" alt="Snapdragon" loading="lazy"><figcaption>Snapdragon SoC</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/TSMC_Logo.svg/200px-TSMC_Logo.svg.png" alt="TSMC" loading="lazy"><figcaption>TSMC</figcaption></figure>
+</div>
+</div>
+<footer><p><a href="index.html">← Nazaj</a></p></footer>
+</body></html>
