@@ -29,26 +29,56 @@
   </section>
   <div class="container content">
     <h2>Kaj je SoC (System on a Chip)?</h2>
-    <p>SoC pomeni, da so številne ključne komponente računalnika integrirane v <strong>en sam čip</strong>: CPU, GPU, Neural Engine / NPU, pomnilniški krmilniki in drugi pospeševalniki.</p>
+    <p>SoC pomeni, da so številne ključne komponente računalnika integrirane v <strong>en sam čip</strong>:</p>
+    <ul>
+      <li>CPU jedra</li>
+      <li>GPU (grafični procesor)</li>
+      <li>Neural Engine / NPU</li>
+      <li>pomnilniški krmilniki</li>
+      <li>video kodeki, I/O krmilniki in drugi pospeševalniki</li>
+    </ul>
+    <p>Pri starejšem Intelovem Macu je bila sestava ločena. Pri Apple Silicon in podobnih sistemih so komponente združene v en SoC.</p>
     <h2>Kaj je Unified Memory?</h2>
     <p>CPU, GPU in AI-pospeševalniki <strong>delijo isti fizični pomnilnik</strong>. Ni več ločenega sistemskega RAM-a in ločenega VRAM-a.</p>
     <div class="compare">
       <div class="card">
-        <h3>Klasični PC</h3>
-        <div class="diagram">CPU → Sistemski RAM
- ↓ (PCIe)
-GPU → Ločeni VRAM</div>
+        <h3>Klasični PC z ločeno grafiko</h3>
+        <div class="diagram">CPU ──► Sistemski RAM (npr. 32 GB)
+         │
+         ▼ (prenos prek PCIe)
+GPU ──► Ločeni VRAM (npr. 16 GB)</div>
+        <p>Podatki se pogosto kopirajo med RAM in VRAM.</p>
       </div>
       <div class="card">
-        <h3>Unified Memory</h3>
-        <div class="diagram">SoC: CPU + GPU + AI
-        ↓
-   Skupen pomnilnik</div>
+        <h3>Sistem z Unified Memory</h3>
+        <div class="diagram">      SoC
+ ┌─────────────────┐
+ │  CPU  GPU  AI   │
+ │        │        │
+ │   Skupen        │
+ │   pomnilnik     │
+ └─────────────────┘</div>
+        <p>CPU in GPU dostopata do istega pomnilnika – manj kopiranja.</p>
       </div>
     </div>
-    <div class="highlight">Skupni pomnilnik ni čarovnija: enote tekmujejo za pasovno širino. Del prostora zaseda OS.</div>
-    <p>Več o konzolah: <a href="konzole-apu.html">Konzole & APU</a>.</p>
+    <h2>Ali 16 GB Unified Memory pomeni 16 GB VRAM-a?</h2>
+    <p><strong>Ne povsem.</strong> Gre za 16 GB skupne fizične kapacitete. GPU lahko dostopa do več pomnilnika kot pri ločeni kartici z npr. 8 GB VRAM-a – koristno za 3D, video in lokalne AI-modele.</p>
+    <div class="highlight">Skupni pomnilnik ni čarovnija: enote tekmujejo za pasovno širino. Del prostora zaseda OS in aplikacije.</div>
+    <h2>Zakaj konzole to uporabljajo že dolgo?</h2>
+    <p>PS5 in Xbox Series X sta že 2020 pokazala učinkovitost skupnega pomnilnika (16 GB GDDR6). Več na <a href="konzole-apu.html">Konzole & APU</a>.</p>
+    <h2>Prednosti in slabosti</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th>Unified Memory / SoC</th><th>Ločen RAM + VRAM</th></tr></thead>
+        <tbody>
+          <tr><td>Učinkovitost</td><td>Manj kopiranja, nižja poraba</td><td>—</td></tr>
+          <tr><td>Zmogljivost</td><td>Dobro za AI, video, 3D</td><td>Višja pasovna širina VRAM</td></tr>
+          <tr><td>Nadgradljivost</td><td>Običajno ni</td><td>Lahko zamenjaš GPU in RAM</td></tr>
+          <tr><td>Velikost</td><td>Omogoča tanke naprave</td><td>Zahteva več prostora</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  <footer><p><a href="index.html">← Nazaj</a> · Unified Memory.si</p></footer>
+  <footer><p><a href="index.html">← Nazaj</a></p></footer>
 </body>
 </html>
