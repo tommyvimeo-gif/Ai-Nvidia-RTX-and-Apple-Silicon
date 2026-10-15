@@ -24,80 +24,41 @@
       </nav>
     </div>
   </header>
-
   <section class="hero">
     <h1>Od klasičnega PC-ja do Unified Memory</h1>
     <p>Prehod z x86 na ARM, združevanje komponent v SoC in skupni pomnilnik – kako se računalniki, konzole, mini PC-ji in AI-naprave arhitekturno vse bolj približujejo drug drugemu.</p>
   </section>
-
   <div class="container content">
     <div class="highlight">
       <strong>Glavna ugotovitev:</strong> Računalnik ni več nujno velik sistem z ločenim procesorjem, grafično kartico in različnimi pomnilniškimi podsistemi. Lahko je zelo integriran sistem na enem čipu (SoC), ki uporablja skupen pomnilniški prostor (Unified Memory) za CPU, GPU in AI-pospeševalnike.
     </div>
-
     <h2>Tri ključne stvari, ki jih ne smemo mešati</h2>
     <div class="card-grid">
-      <div class="card">
-        <span class="badge badge-x86">x86</span><span class="badge badge-arm">ARM</span>
-        <h3>Procesorska arhitektura</h3>
-        <p>x86/x86-64 in ARM sta družini naborov ukazov (ISA). Določata, kako procesor izvaja ukaze – ne pa, kako so komponente združene ali kako je organiziran pomnilnik.</p>
-        <a href="x86-vs-arm.html" class="btn">Več o x86 vs ARM →</a>
-      </div>
-      <div class="card">
-        <span class="badge badge-soc">SoC</span>
-        <h3>System on a Chip</h3>
-        <p>SoC pomeni, da so CPU, GPU, Neural Engine, krmilniki in drugi pospeševalniki integrirani v en sam čip. To omogoča majhne, učinkovite naprave.</p>
-        <a href="soc-unified.html" class="btn">Kaj je SoC? →</a>
-      </div>
-      <div class="card">
-        <span class="badge badge-unified">Unified Memory</span>
-        <h3>Skupni pomnilnik</h3>
-        <p>CPU, GPU in AI-enote delijo isti fizični pomnilnik. Ni več ločenega sistemskega RAM-a in VRAM-a – podatki se ne kopirajo med njima.</p>
-        <a href="soc-unified.html" class="btn">Razlaga Unified Memory →</a>
-      </div>
+      <div class="card"><span class="badge badge-x86">x86</span><span class="badge badge-arm">ARM</span><h3>Procesorska arhitektura</h3><p>x86/x86-64 in ARM sta družini naborov ukazov (ISA).</p><a href="x86-vs-arm.html" class="btn">Več →</a></div>
+      <div class="card"><span class="badge badge-soc">SoC</span><h3>System on a Chip</h3><p>CPU, GPU, Neural Engine in krmilniki v enem čipu.</p><a href="soc-unified.html" class="btn">Kaj je SoC? →</a></div>
+      <div class="card"><span class="badge badge-unified">Unified Memory</span><h3>Skupni pomnilnik</h3><p>CPU, GPU in AI delijo isti fizični pomnilnik.</p><a href="soc-unified.html" class="btn">Razlaga →</a></div>
     </div>
-
-    <h2>Naprave, ki ponazarjajo to spremembo</h2>
+    <h2>Naprave</h2>
     <div class="card-grid">
-      <div class="card">
-        <h3>NVIDIA DGX Spark / RTX Spark</h3>
-        <p>ARM Grace CPU + Blackwell GPU + do 128 GB LPDDR5X Unified Memory. Do 1 PFLOP FP4 AI zmogljivosti. Namenjen lokalnemu AI in ustvarjanju.</p>
-        <a href="nvidia-rtx-spark.html" class="btn">Podrobnosti →</a>
-      </div>
-      <div class="card">
-        <h3>Apple Mac Studio M5 Ultra & M6</h3>
-        <p>M5 Ultra: do 36 CPU jeder, 80 GPU jeder, do 512 GB Unified Memory. M6: prvi 2 nm Apple Silicon s tremi tipi jeder.</p>
-        <a href="apple-silicon.html" class="btn">Apple Silicon →</a>
-      </div>
-      <div class="card">
-        <h3>Microsoft Surface Laptop Ultra</h3>
-        <p>Windows on ARM z NVIDIA RTX Spark – do 20-jedrni Grace CPU, 6144 CUDA jeder, do 128 GB Unified Memory. Konkurenca MacBooku Pro.</p>
-        <a href="surface-laptop.html" class="btn">Surface Ultra →</a>
-      </div>
-      <div class="card">
-        <h3>PlayStation 5 & Xbox Series X</h3>
-        <p>Že leta 2020 sta uporabila x86 APU z 16 GB skupnega GDDR6 pomnilnika. Dokaz, da Unified Memory ni izum ARM-a ali Appla.</p>
-        <a href="konzole-apu.html" class="btn">Konzole & APU →</a>
-      </div>
-      <div class="card">
-        <h3>MacBook Neo (A18 Pro)</h3>
-        <p>Prvi Mac s čipom iz iPhona. A18 Pro + 8 GB Unified Memory – dokaz, da lahko telefonski SoC poganja pravi računalnik.</p>
-        <a href="apple-silicon.html#neo" class="btn">MacBook Neo →</a>
-      </div>
-      <div class="card">
-        <h3>Mini PC-ji z Unified Memory</h3>
-        <p>Od NVIDIA DGX Spark do Surface RTX Spark Dev Box in drugih mini delovnih postaj za lokalni AI.</p>
-        <a href="mini-pc.html" class="btn">Mini PC-ji →</a>
-      </div>
+      <div class="card"><h3>NVIDIA DGX / RTX Spark</h3><p>ARM Grace + Blackwell + 128 GB Unified Memory.</p><a href="nvidia-rtx-spark.html" class="btn">Podrobnosti →</a></div>
+      <div class="card"><h3>Apple Mac Studio M5 Ultra & M6</h3><p>Do 512 GB Unified Memory, 2 nm M6.</p><a href="apple-silicon.html" class="btn">Apple Silicon →</a></div>
+      <div class="card"><h3>Surface Laptop Ultra</h3><p>Windows on Arm z RTX Spark, do 128 GB.</p><a href="surface-laptop.html" class="btn">Surface →</a></div>
+      <div class="card"><h3>PS5 & Xbox Series X</h3><p>x86 APU z 16 GB skupnim GDDR6.</p><a href="konzole-apu.html" class="btn">Konzole →</a></div>
     </div>
-
-    <h2>Zakaj to ni konec klasičnega PC-ja?</h2>
-    <p>Klasični modularni PC z ločenim RAM-om in VRAM-om še vedno omogoča največjo prilagodljivost, nadgradljivost in najvišjo pasovno širino za igre ter znanstveno računanje. Integrirani sistemi z Unified Memory pa ponujajo boljšo energetsko učinkovitost, manjšo kompleksnost in enostavnejšo izmenjavo podatkov med CPU in GPU.</p>
-    <p>Prihodnost bo verjetno vzporedna: integrirani SoC-računalniki za prenosnike in AI, ter zmogljivi modularni PC-ji za najzahtevnejše naloge.</p>
+    <h2>Galerija – relevantne slike</h2>
+    <div class="gallery">
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nvidia_DGX_Spark_oblique_view_dllu.jpg" alt="DGX Spark" loading="lazy"><figcaption>NVIDIA DGX Spark</figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_5_console_and_controller.jpg/640px-PlayStation_5_console_and_controller.jpg" alt="PS5" loading="lazy"><figcaption>PlayStation 5</figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/NVIDIA_logo.svg/200px-NVIDIA_logo.svg.png" alt="NVIDIA" loading="lazy"><figcaption>NVIDIA</figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png" alt="Apple" loading="lazy"><figcaption>Apple</figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Microsoft_logo_%282012%29.svg/200px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft" loading="lazy"><figcaption>Microsoft</figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/200px-AMD_Logo.svg.png" alt="AMD" loading="lazy"><figcaption>AMD</figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Intel_logo_%282020%2C_light_blue%29.svg/200px-Intel_logo_%282020%2C_light_blue%29.svg.png" alt="Intel" loading="lazy"><figcaption>Intel</figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Arm_logo_2017.svg/200px-Arm_logo_2017.svg.png" alt="ARM" loading="lazy"><figcaption>ARM</figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Qualcomm_Snapdragon_logo.svg/200px-Qualcomm_Snapdragon_logo.svg.png" alt="Snapdragon" loading="lazy"><figcaption>Qualcomm</figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/TSMC_Logo.svg/200px-TSMC_Logo.svg.png" alt="TSMC" loading="lazy"><figcaption>TSMC</figcaption></figure>
+    </div>
   </div>
-
-  <footer>
-    <p>Izobraževalna stran o arhitekturi sodobnih računalnikov · 2026 · Temelji na javno dostopnih specifikacijah NVIDIA, Apple, Microsoft, Sony in AMD</p>
-  </footer>
+  <footer><p>Izobraževalna stran · 2026 · <a href="https://github.com/tommyvimeo-gif/Ai-Nvidia-RTX-and-Apple-Silicon">GitHub</a></p></footer>
 </body>
 </html>
