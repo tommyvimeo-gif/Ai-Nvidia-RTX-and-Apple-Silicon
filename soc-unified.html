@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoC in Unified Memory – razlaga</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Unified<span>Memory</span>.si</a>
+      <nav>
+        <a href="index.html">Domov</a>
+        <a href="x86-vs-arm.html">x86 vs ARM</a>
+        <a href="soc-unified.html" class="active">SoC & Unified Memory</a>
+        <a href="nvidia-rtx-spark.html">NVIDIA RTX / DGX Spark</a>
+        <a href="apple-silicon.html">Apple Silicon & M5/M6</a>
+        <a href="surface-laptop.html">Microsoft Surface</a>
+        <a href="konzole-apu.html">Konzole & APU</a>
+        <a href="mini-pc.html">Mini PC-ji</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <h1>SoC in Unified Memory</h1>
+    <p>Kako integracija komponent in skupni pomnilnik spreminjata način, kako računalniki delujejo.</p>
+  </section>
+  <div class="container content">
+    <h2>Kaj je SoC (System on a Chip)?</h2>
+    <p>SoC pomeni, da so številne ključne komponente računalnika integrirane v <strong>en sam čip</strong>: CPU, GPU, Neural Engine / NPU, pomnilniški krmilniki in drugi pospeševalniki.</p>
+    <h2>Kaj je Unified Memory?</h2>
+    <p>CPU, GPU in AI-pospeševalniki <strong>delijo isti fizični pomnilnik</strong>. Ni več ločenega sistemskega RAM-a in ločenega VRAM-a.</p>
+    <div class="compare">
+      <div class="card">
+        <h3>Klasični PC</h3>
+        <div class="diagram">CPU → Sistemski RAM
+ ↓ (PCIe)
+GPU → Ločeni VRAM</div>
+      </div>
+      <div class="card">
+        <h3>Unified Memory</h3>
+        <div class="diagram">SoC: CPU + GPU + AI
+        ↓
+   Skupen pomnilnik</div>
+      </div>
+    </div>
+    <div class="highlight">Skupni pomnilnik ni čarovnija: enote tekmujejo za pasovno širino. Del prostora zaseda OS.</div>
+    <p>Več o konzolah: <a href="konzole-apu.html">Konzole & APU</a>.</p>
+  </div>
+  <footer><p><a href="index.html">← Nazaj</a> · Unified Memory.si</p></footer>
+</body>
+</html>
