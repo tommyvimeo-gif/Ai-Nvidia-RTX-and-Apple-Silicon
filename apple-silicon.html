@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apple Silicon – M5 Ultra, M6, MacBook Neo</title>
+  <title>Apple Silicon – Mac Studio M5 Ultra, M6 in MacBook Neo</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -24,28 +24,45 @@
     </div>
   </header>
   <section class="hero">
-    <h1>Apple Silicon: M5 Ultra & M6 (2 nm)</h1>
-    <p>Od M1 do M5 Ultra in prvega 2 nm čipa – Unified Memory v Macih.</p>
+    <h1>Apple Silicon: od M1 do M5 Ultra in M6 (2 nm)</h1>
+    <p>Apple je z lastnimi SoC-ji in Unified Memory popolnoma spremenil Mac.</p>
   </section>
   <div class="container content">
     <div class="img-box">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png" alt="Apple" style="max-height:50px; filter: invert(1);">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png" alt="Apple" style="max-height:48px; filter: invert(1); margin-bottom:0.8rem;">
+      <figcaption>Apple Silicon – SoC z Unified Memory</figcaption>
     </div>
-    <h2>Mac Studio M5 Ultra (2026)</h2>
+    <h2>Kaj je Apple Silicon?</h2>
+    <p>Apple je pri Macih prešel z Intelovih procesorjev na lastne ARM-based čipe. V en SoC so integrirani CPU, GPU z Neural Acceleratorji, Neural Engine, pomnilniški krmilniki. Vse komponente delijo <strong>Unified Memory</strong>.</p>
+    <h2 id="studio">Mac Studio z M5 Max in M5 Ultra (2026)</h2>
+    <p>Avgusta 2026 je Apple predstavil nov Mac Studio. M5 Ultra je prvi Appleov quad-die čip (dva M5 Max povezana).</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Model</th><th>CPU</th><th>GPU</th><th>Unified Memory</th><th>Cena od</th></tr></thead>
+        <tbody>
+          <tr><td>M5 Max</td><td>do 18 jeder</td><td>do 40 jeder</td><td>do 128 GB</td><td>$2.499</td></tr>
+          <tr><td>M5 Ultra</td><td>do 36 jeder</td><td>do 80 jeder</td><td>96–512 GB</td><td>$5.499</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>512 GB različica je na voljo od oktobra 2026. Idealno za lokalne LLM-je in ekstremne pro workflows.</p>
+    <h2>Apple M6 – prvi 2 nm Apple Silicon</h2>
     <ul>
-      <li>do 36 CPU jeder, 80 GPU jeder</li>
-      <li>Unified Memory: 96–512 GB</li>
-      <li>Cena od $5.499</li>
-    </ul>
-    <h2>M6 – prvi 2 nm Apple Silicon</h2>
-    <ul>
-      <li>12-jedrni CPU (2 super + 4 perf + 6 efficiency)</li>
+      <li>12-jedrni CPU: 2 super + 4 performance + 6 efficiency (prvič trije tipi)</li>
+      <li>12-jedrni GPU z Neural Acceleratorjem</li>
       <li>Dual 16-jedrni Neural Engine</li>
-      <li>do 32 GB Unified Memory, ~170 GB/s</li>
+      <li>do 32 GB Unified Memory, do 170 GB/s</li>
+      <li>Manjši die kot M5, boljša učinkovitost (TSMC 2 nm GAAFET)</li>
     </ul>
-    <h2 id="neo">MacBook Neo (A18 Pro)</h2>
-    <p>Prvi Mac s telefonskim čipom A18 Pro + 8 GB Unified Memory, od $599.</p>
+    <h2 id="neo">MacBook Neo – A18 Pro iz iPhona</h2>
+    <p>Marec 2026: najcenejši MacBook (od $599) z <strong>A18 Pro</strong> čipom iz iPhona 16 Pro.</p>
+    <ul>
+      <li>6-jedrni CPU, 5-jedrni GPU, 16-jedrni Neural Engine</li>
+      <li>8 GB Unified Memory</li>
+      <li>13" Liquid Retina, do 16 ur baterije, pasivno hlajenje</li>
+    </ul>
+    <div class="highlight">Dokazuje, da lahko sodoben telefonski SoC poganja pravi prenosnik z macOS.</div>
   </div>
-  <footer><p><a href="index.html">← Nazaj</a></p></footer>
+  <footer><p><a href="index.html">← Nazaj</a> · Vir: Apple Newsroom 2026</p></footer>
 </body>
 </html>
