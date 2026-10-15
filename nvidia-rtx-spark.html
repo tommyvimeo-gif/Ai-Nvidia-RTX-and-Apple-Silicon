@@ -1,73 +1,27 @@
 <!DOCTYPE html>
 <html lang="sl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NVIDIA DGX Spark in RTX Spark – Unified Memory AI računalnik</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>NVIDIA DGX Spark in RTX Spark</title><link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></head>
 <body>
-  <header>
-    <div class="nav-container">
-      <a href="index.html" class="logo">Unified<span>Memory</span>.si</a>
-      <nav>
-        <a href="index.html">Domov</a>
-        <a href="x86-vs-arm.html">x86 vs ARM</a>
-        <a href="soc-unified.html">SoC & Unified Memory</a>
-        <a href="nvidia-rtx-spark.html" class="active">NVIDIA RTX / DGX Spark</a>
-        <a href="apple-silicon.html">Apple Silicon & M5/M6</a>
-        <a href="surface-laptop.html">Microsoft Surface</a>
-        <a href="konzole-apu.html">Konzole & APU</a>
-        <a href="mini-pc.html">Mini PC-ji</a>
-      </nav>
-    </div>
-  </header>
-  <section class="hero">
-    <h1>NVIDIA DGX Spark & RTX Spark</h1>
-    <p>ARM Grace CPU + Blackwell GPU + do 128 GB koherentnega Unified Memory – lokalni AI superračunalnik v majhnem ohišju.</p>
-  </section>
-  <div class="container content">
-    <div class="img-box">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/NVIDIA_logo.svg/200px-NVIDIA_logo.svg.png" alt="NVIDIA" style="max-height:48px; margin-bottom:0.8rem;">
-      <br>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nvidia_DGX_Spark_oblique_view_dllu.jpg" alt="NVIDIA DGX Spark" style="max-width:100%; max-height:340px; border-radius:10px; object-fit:contain;">
-      <figcaption>NVIDIA DGX Spark – Grace Blackwell superchip, do 128 GB Unified Memory (Wikimedia Commons)</figcaption>
-    </div>
-    <h2>Kaj je DGX Spark / RTX Spark?</h2>
-    <p>NVIDIA je z platformo Grace Blackwell (GB10 / N1X) ustvarila integriran sistem, ki ni običajen PC z ločenim Intel/AMD procesorjem in ločeno grafično kartico RTX. Gre za <strong>SoC</strong>, ki združuje:</p>
-    <ul>
-      <li><strong>ARM Grace CPU</strong> – do 20 jeder (10× Cortex-X925 + 10× Cortex-A725),</li>
-      <li><strong>Blackwell GPU</strong> – do 6.144 CUDA jeder, 5. generacija Tensor jeder, 4. generacija RT jeder,</li>
-      <li><strong>do 128 GB LPDDR5X Unified Memory</strong> – koherenten skupni pomnilnik za CPU in GPU,</li>
-      <li>do približno <strong>1 PFLOP</strong> FP4 AI zmogljivosti (s sparse).</li>
-    </ul>
-    <h2>Glavne specifikacije (2026)</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Specifikacija</th><th>DGX Spark (GB10)</th><th>RTX Spark N1X (vrh)</th></tr></thead>
-        <tbody>
-          <tr><td>CPU</td><td>20-jedrni ARM</td><td>do 20-jedrni Grace</td></tr>
-          <tr><td>GPU</td><td>Blackwell, 6.144 CUDA</td><td>do 6.144 CUDA</td></tr>
-          <tr><td>Unified Memory</td><td>64 / 128 GB LPDDR5X</td><td>do 128 GB</td></tr>
-          <tr><td>Pasovna širina</td><td>~273 GB/s</td><td>do ~300 GB/s</td></tr>
-          <tr><td>AI</td><td>do 1 PFLOP FP4</td><td>do 1 PFLOP FP4</td></tr>
-          <tr><td>OS</td><td>DGX OS (Linux)</td><td>Windows 11 on Arm</td></tr>
-          <tr><td>Oblika</td><td>Mini desktop ~150×150×50 mm</td><td>Prenosniki + desktopi</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <h2>Zakaj je Unified Memory tukaj tako pomemben?</h2>
-    <p>Pri klasičnem računalniku imaš 32 GB sistemskega RAM-a in grafično kartico z 16 GB VRAM-a – to sta <em>ločena</em> sistema. Model AI mora biti omejen na VRAM ali pa se uteži nenehno prestavljajo.</p>
-    <p>Pri DGX/RTX Spark procesor in GPU uporabljata <strong>skupen, koherenten pomnilniški prostor</strong> do 128 GB. To omogoča lokalno poganjanje večjih jezikovnih modelov (do ~100–200B parametrov), manj kopiranja podatkov in enostavnejši razvoj.</p>
-    <div class="highlight">128 GB Unified Memory ne pomeni enake grafične zmogljivosti kot namizna RTX 5090. Prednost je velika kapaciteta skupnega pomnilnika + CUDA sklad. Ločena kartica ima lahko višjo pasovno širino za igre.</div>
-    <h2>DGX Spark vs RTX Spark</h2>
-    <ul>
-      <li><strong>DGX Spark</strong> – AI razvijalci, Linux, fiksna konfiguracija, ConnectX-7 clustering</li>
-      <li><strong>RTX Spark</strong> – Windows on Arm, prenosniki (Surface Laptop Ultra itd.), igre + ustvarjanje, 24–128 GB</li>
-    </ul>
-    <p>Več o Surface: <a href="surface-laptop.html">Microsoft Surface Laptop Ultra</a></p>
-  </div>
-  <footer><p><a href="index.html">← Nazaj na domov</a> · Vir: NVIDIA 2025–2026</p></footer>
-</body>
-</html>
+<header><div class="nav-container"><a href="index.html" class="logo">Unified<span>Memory</span>.si</a><nav><a href="index.html">Domov</a><a href="x86-vs-arm.html">x86 vs ARM</a><a href="soc-unified.html">SoC & Unified Memory</a><a href="nvidia-rtx-spark.html" class="active">NVIDIA RTX / DGX Spark</a><a href="apple-silicon.html">Apple Silicon & M5/M6</a><a href="surface-laptop.html">Microsoft Surface</a><a href="konzole-apu.html">Konzole & APU</a><a href="mini-pc.html">Mini PC-ji</a></nav></div></header>
+<section class="hero"><h1>NVIDIA DGX Spark & RTX Spark</h1><p>ARM Grace + Blackwell + do 128 GB Unified Memory.</p></section>
+<div class="container content">
+<div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nvidia_DGX_Spark_oblique_view_dllu.jpg" alt="DGX Spark" style="max-width:100%; max-height:320px; border-radius:10px;"><figcaption>NVIDIA DGX Spark</figcaption></div>
+<h2>Kaj je DGX / RTX Spark?</h2><p>SoC z 20-jedrnim ARM Grace CPU, Blackwell GPU (do 6.144 CUDA), do 128 GB LPDDR5X Unified Memory in do 1 PFLOP FP4 AI.</p>
+<div class="table-wrap"><table><thead><tr><th>Spec</th><th>DGX Spark</th><th>RTX Spark N1X</th></tr></thead><tbody><tr><td>CPU</td><td>20-jedrni ARM</td><td>do 20-jedrni</td></tr><tr><td>GPU</td><td>6.144 CUDA</td><td>do 6.144</td></tr><tr><td>Memory</td><td>64/128 GB</td><td>do 128 GB</td></tr><tr><td>OS</td><td>Linux</td><td>Windows on Arm</td></tr></tbody></table></div>
+<div class="highlight">128 GB skupnega pomnilnika omogoča lokalne modele do ~100–200B parametrov.</div>
+<h2>Galerija – relevantne slike</h2>
+<div class="gallery">
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nvidia_DGX_Spark_oblique_view_dllu.jpg" alt="DGX Spark" loading="lazy"><figcaption>DGX Spark</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/NVIDIA_logo.svg/200px-NVIDIA_logo.svg.png" alt="NVIDIA" loading="lazy"><figcaption>NVIDIA</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Arm_logo_2017.svg/200px-Arm_logo_2017.svg.png" alt="ARM" loading="lazy"><figcaption>ARM Grace</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/TSMC_Logo.svg/200px-TSMC_Logo.svg.png" alt="TSMC" loading="lazy"><figcaption>TSMC</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Microsoft_logo_%282012%29.svg/200px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft" loading="lazy"><figcaption>Windows on Arm</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png" alt="Apple" loading="lazy"><figcaption>Primerjava Apple</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/200px-AMD_Logo.svg.png" alt="AMD" loading="lazy"><figcaption>AMD</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_5_console_and_controller.jpg/640px-PlayStation_5_console_and_controller.jpg" alt="PS5" loading="lazy"><figcaption>Konzole</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Qualcomm_Snapdragon_logo.svg/200px-Qualcomm_Snapdragon_logo.svg.png" alt="Snapdragon" loading="lazy"><figcaption>Snapdragon</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Intel_logo_%282020%2C_light_blue%29.svg/200px-Intel_logo_%282020%2C_light_blue%29.svg.png" alt="Intel" loading="lazy"><figcaption>Intel</figcaption></figure>
+</div>
+</div>
+<footer><p><a href="index.html">← Nazaj</a></p></footer>
+</body></html>

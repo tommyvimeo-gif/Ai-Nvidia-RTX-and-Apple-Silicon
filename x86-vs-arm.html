@@ -1,110 +1,26 @@
 <!DOCTYPE html>
 <html lang="sl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>x86 proti ARM – Procesorski arhitekturi</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>x86 proti ARM</title><link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></head>
 <body>
-  <header>
-    <div class="nav-container">
-      <a href="index.html" class="logo">Unified<span>Memory</span>.si</a>
-      <nav>
-        <a href="index.html">Domov</a>
-        <a href="x86-vs-arm.html" class="active">x86 vs ARM</a>
-        <a href="soc-unified.html">SoC & Unified Memory</a>
-        <a href="nvidia-rtx-spark.html">NVIDIA RTX / DGX Spark</a>
-        <a href="apple-silicon.html">Apple Silicon & M5/M6</a>
-        <a href="surface-laptop.html">Microsoft Surface</a>
-        <a href="konzole-apu.html">Konzole & APU</a>
-        <a href="mini-pc.html">Mini PC-ji</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <h1>x86 proti ARM</h1>
-    <p>Dve poti razvoja procesorjev – kaj pomenita in zakaj se danes vse bolj prepletata.</p>
-  </section>
-
-  <div class="container content">
-    <h2>Kaj je x86 / x86-64?</h2>
-    <p>x86 je družina procesorskih arhitektur, ki izvira iz Intelovega procesorja 8086 iz leta 1978. Danes se pri osebnih računalnikih in strežnikih večinoma uporablja 64-bitna različica, imenovana <strong>x86-64</strong> (tudi AMD64).</p>
-    <p>Na tej arhitekturi temeljijo procesorji Intel Core, Intel Xeon, AMD Ryzen, AMD EPYC in številni drugi. Tradicionalni namizni PC je pogosto sestavljen iz:</p>
-    <ul>
-      <li>procesorja CPU (Intel ali AMD),</li>
-      <li>ločene grafične kartice GPU (NVIDIA GeForce / AMD Radeon),</li>
-      <li>sistemskega pomnilnika DDR5,</li>
-      <li>lastnega grafičnega pomnilnika GDDR6 / GDDR7 na kartici,</li>
-      <li>matične plošče in dodatnih krmilnikov.</li>
-    </ul>
-    <p>To ni obvezna sestava vsakega x86 sistema – obstajajo tudi integrirane rešitve – a je najpogostejši način izdelave zmogljivih namiznih in igralnih računalnikov.</p>
-
-    <h2>Kaj je ARM?</h2>
-    <p>ARM je drugačna procesorska arhitektura (RISC – Reduced Instruction Set Computing). Zasnovana je na drugačnem naboru ukazov kot x86-64 in se tradicionalno uporablja v napravah, kjer so pomembni učinkovitost, poraba energije in integracija.</p>
-    <p>Primeri:</p>
-    <ul>
-      <li>Apple A-serija v iPhonih in iPadih,</li>
-      <li>Apple M-serija v Macih (Apple Silicon),</li>
-      <li>Qualcomm Snapdragon v telefonih in Windows prenosnikih,</li>
-      <li>NVIDIA Grace CPU v DGX Spark in RTX Spark,</li>
-      <li>številni čipi v strežnikih, vgrajenih sistemih in AI-pospeševalnikih.</li>
-    </ul>
-
-    <div class="highlight">
-      <strong>Pomembno:</strong> ARM sam po sebi ne pomeni nujno majhne porabe, SoC ali Unified Memory. Tudi zelo zmogljiv ARM procesor lahko porablja veliko energije, arhitekturo pa je mogoče uporabiti v zelo različnih sistemih – od telefonov do superračunalnikov.
-    </div>
-
-    <h2>Windows ni enak x86</h2>
-    <p>Windows obstaja tudi za ARM (Windows on Arm). Zato lahko Windows teče tako na Intel/AMD procesorjih kot na združljivih ARM procesorjih (npr. Qualcomm Snapdragon, NVIDIA Grace v RTX Spark). Emulacija x86 aplikacij (Prism) omogoča, da večina starih programov deluje tudi na ARM.</p>
-
-    <h2>Primerjava na prvi pogled</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Lastnost</th>
-            <th>x86-64</th>
-            <th>ARM</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Izvor</td>
-            <td>Intel 8086 (1978)</td>
-            <td>Acorn RISC Machine (1980s)</td>
-          </tr>
-          <tr>
-            <td>Tipična uporaba</td>
-            <td>Namizni PC, strežniki, igre</td>
-            <td>Telefoni, prenosniki, SoC, AI</td>
-          </tr>
-          <tr>
-            <td>Znani čipi</td>
-            <td>Intel Core, AMD Ryzen</td>
-            <td>Apple M/A, Snapdragon, Grace</td>
-          </tr>
-          <tr>
-            <td>Programska združljivost</td>
-            <td>Desetletja Windows/Linux programske opreme</td>
-            <td>Izvorna podpora raste, emulacija za x86</td>
-          </tr>
-          <tr>
-            <td>Energetska učinkovitost</td>
-            <td>Tradicionalno višja poraba</td>
-            <td>Pogosto boljša (vendar odvisno od implementacije)</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p>V prihodnosti bosta obe arhitekturi obstajali vzporedno. Pomembnejša od imena arhitekture je celotna zasnova sistema – SoC, pomnilnik, hlajenje in programska oprema.</p>
-  </div>
-
-  <footer>
-    <p><a href="index.html">← Nazaj na domov</a> · Unified Memory.si</p>
-  </footer>
-</body>
-</html>
+<header><div class="nav-container"><a href="index.html" class="logo">Unified<span>Memory</span>.si</a><nav><a href="index.html">Domov</a><a href="x86-vs-arm.html" class="active">x86 vs ARM</a><a href="soc-unified.html">SoC & Unified Memory</a><a href="nvidia-rtx-spark.html">NVIDIA RTX / DGX Spark</a><a href="apple-silicon.html">Apple Silicon & M5/M6</a><a href="surface-laptop.html">Microsoft Surface</a><a href="konzole-apu.html">Konzole & APU</a><a href="mini-pc.html">Mini PC-ji</a></nav></div></header>
+<section class="hero"><h1>x86 proti ARM</h1><p>Dve poti razvoja procesorjev.</p></section>
+<div class="container content">
+<h2>Kaj je x86 / x86-64?</h2><p>x86 izhaja iz Intel 8086 (1978). Danes 64-bitna različica x86-64 (AMD64). Temeljijo nanjo Intel Core, AMD Ryzen, strežniki in večina igralnih PC-jev.</p>
+<h2>Kaj je ARM?</h2><p>RISC arhitektura. Apple A/M serija, Qualcomm Snapdragon, NVIDIA Grace, strežniki in vgrajeni sistemi.</p>
+<div class="highlight">ARM ne pomeni nujno majhne porabe ali Unified Memory – odvisno od implementacije.</div>
+<h2>Galerija – relevantne slike</h2>
+<div class="gallery">
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Intel_logo_%282020%2C_light_blue%29.svg/200px-Intel_logo_%282020%2C_light_blue%29.svg.png" alt="Intel" loading="lazy"><figcaption>Intel</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/200px-AMD_Logo.svg.png" alt="AMD" loading="lazy"><figcaption>AMD</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Arm_logo_2017.svg/200px-Arm_logo_2017.svg.png" alt="ARM" loading="lazy"><figcaption>ARM</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/NVIDIA_logo.svg/200px-NVIDIA_logo.svg.png" alt="NVIDIA" loading="lazy"><figcaption>NVIDIA</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png" alt="Apple" loading="lazy"><figcaption>Apple</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Microsoft_logo_%282012%29.svg/200px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft" loading="lazy"><figcaption>Microsoft</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Qualcomm_Snapdragon_logo.svg/200px-Qualcomm_Snapdragon_logo.svg.png" alt="Snapdragon" loading="lazy"><figcaption>Qualcomm</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nvidia_DGX_Spark_oblique_view_dllu.jpg" alt="DGX Spark" loading="lazy"><figcaption>DGX Spark (ARM)</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_5_console_and_controller.jpg/640px-PlayStation_5_console_and_controller.jpg" alt="PS5" loading="lazy"><figcaption>PS5 (x86)</figcaption></figure>
+<figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/TSMC_Logo.svg/200px-TSMC_Logo.svg.png" alt="TSMC" loading="lazy"><figcaption>TSMC</figcaption></figure>
+</div>
+</div>
+<footer><p><a href="index.html">← Nazaj</a></p></footer>
+</body></html>
